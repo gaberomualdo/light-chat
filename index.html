@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>cmdchat</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="icon" href="main_logo.png">
+</head>
+<body>
+  <style type="text/css">
+  
+  .homeBtn,.resetUsername,.hidetab {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    top: 0.5rem;
+    cursor: pointer;
+  }
+  .homeBtn {
+    left: 0.5rem;
+    background-image: url(arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.75rem;
+    transform: scale(-1, 1);
+  }
+  .resetUsername,.hidetab {
+    right: 1.25rem;
+    width: auto;
+    line-height: 2.5rem;
+    text-decoration: none;
+  }
+  .hidetab {
+    top: 3.25rem;
+  }
+
+
+  </style>
+  <a href="about.html" class="homeBtn"></a>
+  <a class="resetUsername" href="javascript:localStorage.setItem('cmdchat_username','');location.reload()">Reset Username</a>
+  <a class="hidetab" onclick="window.open('https://google.com/', '_blank', 'location=yes,height=700,width=1240,scrollbars=yes,status=yes');">Hide Tab</a>
+  <div class="container">
+    <div class="chat">
+
+    </div>
+    <div class="send_message">
+      <textarea type="text" spellcheck="false" placeholder="Send Message..."></textarea>
+    </div>
+    <div class="username">
+      <textarea type="text" spellcheck="false" placeholder="Choose Username..."></textarea>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyChkwG7fLVk5tkGrikbaNEvqZvr1_YeEAg",
+      authDomain: "cmdchat-6759a.firebaseapp.com",
+      databaseURL: "https://cmdchat-6759a.firebaseio.com",
+      projectId: "cmdchat-6759a",
+      storageBucket: "cmdchat-6759a.appspot.com",
+      messagingSenderId: "650097106377"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="vendors.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

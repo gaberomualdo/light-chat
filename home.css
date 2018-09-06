@@ -1,0 +1,36 @@
+.container:not(.get_username) .username,.container.get_username .send_message {
+  display: none;
+}
+.container .chat, .container .username, .container .send_message {
+  width: 100%;
+  display: block;
+  clear: both;
+  box-sizing: border-box;
+}
+.container .username, .container .send_message {
+  border-top: 1px solid #0f0;
+}
+.container .username textarea, .container .send_message textarea {
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  height: 7rem;
+  line-height: 1.5;
+}
+.container .chat {
+  height: calc(100vh - 7rem);
+  border: 5px solid transparent;
+  border-top-width: 6px;
+  border-bottom-width: 6px;
+  padding: 1rem 1.5rem;
+  overflow-y: auto;
+}
+.container .chat p {
+  display: block;
+  line-height: 1.5;
+  word-wrap: break-word;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+textarea::placeholder {
+  color: rgba(0,255,0,0.5);
+}

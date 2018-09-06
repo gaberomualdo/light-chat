@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Consolas", "Monaco", "Andale Mono", "Inconsolata", "Roboto Mono", "Ubuntu Mono", monospace;
+  color: #0f0;
+  font-size: 1.125rem;
+}
+body {
+  background-color: #000;
+  text-align: center;
+  overflow: hidden;
+}
+input,textarea {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  width: 100%;
+}
+::selection {
+  background-color: #0f0;
+  color: #000;
+}
+.container {
+  width: 600px;
+  display: inline-block;
+  border: 1px solid #0f0;
+  border-top: none;
+  border-bottom: none;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,255,0,0.25);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,255,0,0.75);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,255,0,1);
+}

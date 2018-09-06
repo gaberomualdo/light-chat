@@ -1,0 +1,35 @@
+div.container {
+  text-align: left;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+p,a,input {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+input,a.go {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.5rem;
+	border: 1px solid #0f0;
+	margin-top: 0.5rem;
+}
+input::placeholder {
+	color: rgba(0,255,0,0.5);
+}
+a.go {
+	position: absolute;
+	right: 1.5rem;
+	border-color: transparent;
+	margin-top: calc(-2.75rem - 2px);
+	width: calc(2.5rem + 2px);
+	text-align: center;
+	cursor: pointer;
+	color: transparent;
+	background-image: url(arrow.png);
+	background-size: 1.125rem;
+	background-position: center;
+	background-repeat: no-repeat;
+}

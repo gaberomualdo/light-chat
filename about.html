@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>cmdchat</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="icon" href="main_logo.png">
+</head>
+<body>
+  <div class="container">
+    <p style="font-size: 1rem;">cmdchat: a simple chat service</p>
+    <br>
+    <p>Join Chat</p>
+    <input type="text" spellcheck="false" id="join" onkeydown="goKey()" placeholder="Chat Name (no spaces)" value="">
+    <a class="go" onclick="go('join')";>></a>
+    <br>
+    <p>Create Chat</p>
+    <input type="text" spellcheck="false" id="create" onkeydown="goKey()" placeholder="Chat Name (no spaces)" value="">
+    <a class="go" onclick="go('create')";>></a>
+  </div>
+  <script type="text/javascript">
+  document.querySelector("#create").value = "";
+  document.querySelector("#join").value = "";
+
+  document.getElementById("join").onkeydown = function(e){
+    goKey(e,"join");
+  }
+  document.getElementById("create").onkeydown = function(e){
+    goKey(e,"create");
+  }
+  function goKey(e,name){
+    if(e.keyCode == 13){
+      go(name);
+    }
+  }
+  function go(name){
+    if(document.getElementById(name).value != ""){
+      window.location = 'index.html#' + document.getElementById(name).value;
+    }
+  }
+  </script>
+</body>
+</html>

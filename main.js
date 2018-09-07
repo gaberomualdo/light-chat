@@ -13,7 +13,7 @@ function check_chat_hash(hashchangefunc){
   }
 }
 function init_chat(){
-  document.title = "#" + chatname + " | cmdchat";
+  document.title = "#" + chatname + " | lightchat";
   if(!username) {
     document.querySelector("div.container").classList.add("get_username");
     document.querySelector("div.container div.username textarea").focus();

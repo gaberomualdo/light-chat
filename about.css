@@ -8,28 +8,57 @@ p,a,input {
   line-height: 1.5;
   margin-bottom: 0.25rem;
 }
+input:focus {
+	border-color: #2188ff;
+}
 input,a.go {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 0.5rem;
-	border: 1px solid #0f0;
+	padding: 0.5rem 0.625rem;
+	border: 2px solid #dedede;
 	margin-top: 0.5rem;
-}
-input::placeholder {
-	color: rgba(0,255,0,0.5);
+	border-radius: 6px;
+	box-shadow: inset 0 0px 3px #eee;
 }
 a.go {
+	padding: 0.5rem;
+	box-shadow: none;
+	border-radius: 0;
 	position: absolute;
 	right: 1.5rem;
 	border-color: transparent;
-	margin-top: calc(-2.75rem - 2px);
-	width: calc(2.5rem + 2px);
+	margin-top: calc(-2.75rem - 4px);
+	width: calc(2.5rem + 4px);
 	text-align: center;
 	cursor: pointer;
 	color: transparent;
-	background-image: url(arrow.png);
+	background-image: url(arrowlight.png);
 	background-size: 1.125rem;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+input#join:focus ~ a.go#joinbtn {
+	background-image: url(arrowblue.png);
+}
+input#create:focus ~ a.go#createbtn {
+	background-image: url(arrowblue.png);
+}
+p.logo {
+	display: block;
+	margin-bottom: 2rem;
+}
+p.logo, p.logo * {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+p.logo img {
+	height: 1.75rem;
+	width: auto;
+	float: left;
+	margin-right: 0.5rem;
+}
+p.logo strong {
+	float: left;
+	font-size: 1.25rem;
 }

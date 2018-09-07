@@ -11,15 +11,15 @@
 </head>
 <body>
   <div class="container">
-    <p style="font-size: 1rem;">cmdchat: a simple chat service</p>
+    <p class="logo"><img src="main_logo.png"><strong>cmdchat</strong></p>
     <br>
     <p>Join Chat</p>
     <input type="text" spellcheck="false" id="join" onkeydown="goKey()" placeholder="Chat Name (no spaces)" value="">
-    <a class="go" onclick="go('join')";>></a>
+    <a id="joinbtn" class="go" onclick="go('join')";>></a>
     <br>
     <p>Create Chat</p>
     <input type="text" spellcheck="false" id="create" onkeydown="goKey()" placeholder="Chat Name (no spaces)" value="">
-    <a class="go" onclick="go('create')";>></a>
+    <a id="createbtn" class="go" onclick="go('create')";>></a>
   </div>
   <script type="text/javascript">
   document.querySelector("#create").value = "";

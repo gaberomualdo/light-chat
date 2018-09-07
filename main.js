@@ -27,11 +27,27 @@ function init_chat(){
     var newchat = JSON.parse(snapshot.val());
     if(newchat.length - chat.length == 1){
       chat = newchat;
-      document.querySelector(".container .chat").innerHTML += "<p>" + chat[chat.length - 1] + "</p>";
+      name = chat[chat.length - 1].split("&gt; ")[0].split("&lt;").join("");
+      msg = chat[chat.length - 1].split("&gt; ");
+	  msg.shift();
+	  msg = msg.join("> ");
+      var usernamecode = "";
+	  if(name == localStorage.getItem("cmdchat_username")){
+	    usernamecode = "right";
+	  }
+	  document.querySelector(".container .chat").innerHTML += "<div class='" + usernamecode + "'><span>" + name + "</span><p>" + msg + "</p></div>";
     }else{
       chat = newchat;
       chat.forEach(function(item,index){
-        document.querySelector(".container .chat").innerHTML += "<p>" + item + "</p>";
+      	name = item.split("&gt; ")[0].split("&lt;").join("");
+      	msg = item.split("&gt; ");
+      	msg.shift();
+      	msg = msg.join("> ");
+      	var usernamecode = "";
+      	if(name == localStorage.getItem("cmdchat_username")){
+      		usernamecode = "right";
+      	}
+        document.querySelector(".container .chat").innerHTML += "<div class='" + usernamecode + "'><span>" + name + "</span><p>" + msg + "</p></div>";
       });
     }
     var element = document.querySelector(".container .chat");

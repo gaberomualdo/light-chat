@@ -21,10 +21,38 @@
   padding: 1rem 1.5rem;
   overflow-y: auto;
 }
-.container .chat p {
+.container .chat div {
   display: block;
-  line-height: 1.5;
-  word-wrap: break-word;
+  overflow: auto;
+  margin: 0.5rem 0;
+  float: left;
+  clear: both;
+  max-width: 80%;
   text-align: left;
-  margin-bottom: 0.5rem;
+}
+.container .chat div p{
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  padding: 0.5rem;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: 1px solid #dedede;
+  border-left: none;
+  text-align: left;
+}
+.container .chat div.right {
+  float: right;
+}
+.container .chat div.right {
+  text-align: right;
+}
+.container .chat div.right p {
+  padding: 0.5rem;
+  border-radius: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border: 1px solid #2188ff;
+  border-right: none;
+  background-color: #2188ff;
+  color: #fff;
 }
